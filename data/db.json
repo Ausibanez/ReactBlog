@@ -1,0 +1,25 @@
+{
+  "blogs": [
+    {
+      "title": "Time to learn some Reactjs",
+      "body": "Today I am learning how to create a Reactjs website which I am very excited about. It's really amazing how much has changed since the old html page fetch days. Websites are so much more responsive now and less reliant on constant server page requests which really shows in the overall experience. I think this has really helped web applications take off and there is a promising future for serving data this way. I hope I can learn a lot more and create something really interesting!",
+      "date": "3/20/2021",
+      "type": "insight",
+      "id": 1
+    },
+    {
+      "title": "Mountain biking is awesome",
+      "body": "One of my favourite hobbies to stay active is mountain biking. It's such a great way to combine both exercise and an efficient mode of transportation. I just wish more people would adopt bike riding of any kind and we would see governments invest in better infrastructure all around the world.",
+      "date": "3/19/2021",
+      "type": "insight",
+      "id": 2
+    },
+    {
+      "title": "Today's top tips",
+      "body": "Tip number 1: There is no number 1. There is no number 2 either. Actually you've wasted your time because there are no tips for today.",
+      "date": "3/18/2021",
+      "type": "tip",
+      "id": 3
+    }
+  ]
+}
