@@ -16,10 +16,17 @@
     },
     {
       "title": "Today's top tips",
-      "body": "Tip number 1: There is no number 1. There is no number 2 either. Actually you've wasted your time because there are no tips for today.",
       "date": "3/18/2021",
+      "body": "Tip number 1: There is no number 1. There is no number 2 either. Actually you've wasted your time because there are no tips for today.",
       "type": "tip",
       "id": 3
+    },
+    {
+      "title": "test new title",
+      "date": "test date new",
+      "body": "test body new",
+      "type": "tip",
+      "id": 4
     }
   ]
 }

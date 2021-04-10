@@ -35,26 +35,30 @@ const Create = () => {
         <label>Title:</label>
         <input 
           type="text"
+          name="title"
           required
-          value={title}
+          value={title}          
           onChange={(e) => setTitle(e.target.value)}
         />
         <label>Date:</label>
         <input 
           type="text"
+          name="date"
           required
-          value={date}
+          value={date}          
           onChange={(e) => setDate(e.target.value)}
         />
         <label>Body:</label>
         <textarea
+          name="body"
           required
-          value={body}
+          value={body}          
           onChange={(e) => setBody(e.target.value)}
         ></textarea>
         <label>Type:</label>
         <select
-          value={type}
+          name="type"
+          value={type}          
           onChange={(e) => setType(e.target.value)}
         >
           <option value="insight">insight</option>

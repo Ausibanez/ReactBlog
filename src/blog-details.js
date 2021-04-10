@@ -1,12 +1,13 @@
 import { useHistory, useParams } from "react-router";
 import useFetch from './use-fetch';
+import { Link } from 'react-router-dom';
 
 const BlogDetails = () => {
   const { id } = useParams();
   const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
   const history = useHistory();
 
-  const handleClick= () => {
+  const handleDeleteClick= () => {
     fetch('http://localhost:8000/blogs/' + blog.id, {
       method: 'DELETE'
     }).then(() => {
@@ -23,7 +24,14 @@ const BlogDetails = () => {
           <h2>{ blog.title }</h2>
           <p>{ blog.date }</p>
           <div>{ blog.body }</div>
-          <button onClick={handleClick}>delete</button>
+          <Link to={`/edit/${blog.id}`}>
+            <button>edit</button>
+          </Link>
+          <button onClick={ () => { 
+            if (window.confirm('Delete this blog, are you sure?')) {
+              handleDeleteClick();
+            }
+          } }>delete</button>
         </article>
       )}
     </div>
