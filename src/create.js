@@ -65,8 +65,8 @@ const Create = () => {
           <option value="insight">insight</option>
           <option value="tip">tip</option>
         </select>
-        { !isPending && <button>Add Blog</button>}
-        { isPending && <button disabled>Adding blog...</button>}
+        { !isPending && <button>add blog</button>}
+        { isPending && <button disabled>adding blog...</button>}
       </form>
     </div>
    );

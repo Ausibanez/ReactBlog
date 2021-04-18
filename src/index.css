@@ -111,3 +111,7 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.create #cancelButton {
+  margin-left: 20px;
+}

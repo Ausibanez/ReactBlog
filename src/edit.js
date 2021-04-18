@@ -37,7 +37,11 @@ const Edit = () => {
       setIsPending(false);
       history.push('/blogs/' + id);
     })    
-  }  
+  }
+  
+  const handleCancelClick= () => {
+    history.go(-1);
+  }
 
   return (
     <div className="create">
@@ -78,10 +82,11 @@ const Edit = () => {
             <option value="insight">insight</option>
             <option value="tip">tip</option>
           </select>
-          { !isPending && !isFetchPending && <button>Update Blog</button>}
-          { isPending && <button disabled>Updating blog...</button>}
+          { !isPending && !isFetchPending && <button>update blog</button>}
+          { isPending && <button disabled>updating blog...</button>}
+          <button id="cancelButton" onClick={ () => { handleCancelClick(); } }>cancel</button>
         </form>
-      )}
+      )}      
     </div>
    );
 }
