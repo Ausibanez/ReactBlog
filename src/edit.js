@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useHistory, useParams } from 'react-router-dom';
 import useFetch from './use-fetch';
+import './global.js'
 
 const Edit = () => {
   const { id } = useParams();
-  const { data: blog, error, isFetchPending } = useFetch('http://localhost:8000/blogs/' + id);
+  const { data: blog, error, isFetchPending } = useFetch(global.urlBlogs + id);
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [body, setBody] = useState('');
@@ -27,7 +28,7 @@ const Edit = () => {
 
     setIsPending(true);
         
-    fetch('http://localhost:8000/blogs/' + id, {
+    fetch(global.urlBlogs + id, {
       method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)
